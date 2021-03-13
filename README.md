@@ -3,7 +3,7 @@
 
 
 First you have to create a array for all your items and store them each single object.
-```
+```js
 const products = [
   {
     id: 1, 
