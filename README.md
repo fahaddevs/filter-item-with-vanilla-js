@@ -88,4 +88,64 @@ const products = [
 ]
 ```
 
+Select products container and filter buttons
+```js 
+// all items container
+const wrapper = document.querySelector('.product-wrapper');
+// filter btn
+const btns = document.querySelectorAll('.filter-btn');
+``` 
+
+And then create a function for getting all dynamic content from the `products array` 
+```js 
+// funtion for getting all dynamic content from array use map method.
+function displayItems (displayItem){
+  let displayProducts = displayItem.map(function(product){
+    return `<div class="col-lg-6">
+              <div class="product rounded-3 border p-3 shadow">
+                <div class="thumb">
+                  <img src=${product.img} alt=${product.title}>
+                </div>
+                <div class="content">
+                  <h3 class="title">${product.title}</h3>
+                  <h4 class="price">$${product.price}</h4>
+                  <p class="product-details">${product.desc}</p>
+                </div>
+              </div>
+            </div>`;
+  });
+  displayProducts = displayProducts.join("");
+  wrapper.innerHTML = displayProducts;
+}
+```
+
+Then show all items when DOM is loaded
+```js 
+// show all items when DOM is loaded
+window.addEventListener('DOMContentLoaded', function(){
+  displayItems(products);
+});
+```
+
+Then create a loop for filter button and get specific items from the `products array` 
+```js
+// filter items when specific button is clicked
+btns.forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    const category = e.currentTarget.dataset.id;
+    const menuCategory = products.filter(function(productItem){
+      if (productItem.category == category){
+        return productItem
+      }
+    });
+    // console.log(menuCategory);
+    if (category == 'all'){
+      displayItems(products)
+    } else {
+      displayItems(menuCategory);
+    }
+  });
+});
+```
+
 [Demo link](https://fahaddevs.github.io/filter-item-with-vanilla-js/)
