@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product .thumb {
+  width: 40%;
+}
+.product .thumb {
+  
+}
+.product .content {
+  width: 60%;
+  padding-left: 20px;
+}
