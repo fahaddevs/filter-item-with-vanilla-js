@@ -81,14 +81,17 @@ const products = [
   }
 ]
 
+// all items container
 const wrapper = document.querySelector('.product-wrapper');
+// filter btn
 const btns = document.querySelectorAll('.filter-btn');
 
+// show all items when DOM is loaded
 window.addEventListener('DOMContentLoaded', function(){
   displayItems(products);
 });
 
-
+// filter items when specific button is clicked
 btns.forEach(function(btn){
   btn.addEventListener('click', function(e){
     const category = e.currentTarget.dataset.id;
@@ -106,7 +109,7 @@ btns.forEach(function(btn){
   });
 });
 
-
+// funtion for getting all dynamic content from array use map method.
 function displayItems (displayItem){
   let displayProducts = displayItem.map(function(product){
     return `<div class="col-lg-6">
