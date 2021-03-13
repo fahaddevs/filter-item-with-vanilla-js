@@ -160,4 +160,4 @@ btns.forEach(function(btn){
 | Twitter       | [Twitter Profile](https://twitter.com/fahaddevs)           |
 | Instagram     | [Instagram Profile](https://www.instagram.com/fahaddevs/)  |
 | CodePen       | [CodePen Profile](https://codepen.io/fahaddevs/)           |
-| Youtube       | [CodePen Profile](https://youtube.com/fahaddevs/)           |
+| Youtube       | [Youtube Channel](https://youtube.com/fahaddevs/)           |
